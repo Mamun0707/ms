@@ -114,8 +114,8 @@
                   </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                           <?php if(isset($_SESSION['user_loggedin']) && $_SESSION['user_loggedin']){ ?>
-                              <li><a class="dropdown-item" href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Order</a></li>
-                              <li><a class="dropdown-item" href=""><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a></li>
+                              <li><a class="dropdown-item" href="my_order.php"><span class="edu-icon edu-home-admin author-log-ic"></span>My Order</a></li>
+                              <li><a class="dropdown-item" href="profile.php"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a></li>
                               <li><a class="dropdown-item" href="<?= $baseurl ?>logout.php"><span class="edu-icon edu-locked author-log-ic"></span>Logout</a></li>
                           <?php } else { ?>
                               <li><a class="dropdown-item " href="<?= $baseurl ?>login.php"><span class="edu-icon edu-locked author-log-ic"></span>Login</a></li>

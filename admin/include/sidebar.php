@@ -217,6 +217,22 @@
 
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon bi bi-cart3"></i>
+        <div data-i18n="Dashboards">Orders</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="<?= $baseurl ?>orders_list.php" class="menu-link">
+            <div data-i18n="CRM">Order List</div>
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+
+
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon bi bi-journal-medical"></i>
         <div data-i18n="Dashboards">Report</div>
       </a>
