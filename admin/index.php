@@ -130,7 +130,14 @@
                 <div class="row mt-5">
 
                 <div class="col-lg-3  order-0">
-                  
+                    <div class="card">
+                    <div class="d-flex align-items-end row">
+                        <div class="card-body text-center">
+                          <h1><i class="menu-icon bi bi-bag-heart"></i></h1>
+                          <a href="orders_list.php"><h5 class="card-title text-center">Orders</h5></a> 
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 <div class="col-lg-3  order-0">
                   <div class="card">

@@ -8,7 +8,7 @@
 <script src="https://cdn.datatables.net/v/bs5/dt-2.0.8/datatables.min.js"></script>
 
 <div class="container-fluid">
-    <h4 class="page-header"><small>Orders /</small> List</h4>
+    <!-- <h4 class="page-header"><small>Orders /</small> List</h4> -->
 
     <!-- Basic Bootstrap Table -->
     <div class="panel panel-default">
@@ -54,12 +54,10 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?= $baseurl ?>invoice.php?id=<?= $data->id ?>"
-                                        ><i class="bx bx-trash me-2"></i> Invoice</a
-                                        >
+                                        <a class="dropdown-item" href="invoice.php?txnid=<?= $data->transaction_id ?? "" ?>"
+                                        ><i class="bx bx-receipt me-2"></i> Invoice</a>
                                         <a class="dropdown-item" href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>"
-                                        ><i class="bx bx-trash me-2"></i> Delete</a
-                                        >
+                                        ><i class="bx bx-trash me-2"></i> Delete</a>
                                     </div>
                                 </div>
                             </td>
