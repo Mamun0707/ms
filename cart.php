@@ -1,5 +1,5 @@
 <?php include('include/header.php') ; ?>
-
+</div>
 
 <div class="untree_co-section before-footer-section">
   <div class="container">
@@ -27,18 +27,7 @@
 
     <div class="row">
       <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-12">
-            <label class="text-black h4" for="coupon">Coupon</label>
-            <p>Enter your coupon code if you have one.</p>
-          </div>
-          <div class="col-md-7 mb-3 mb-md-0">
-            <input type="text" class="form-control py-3" id="cupon_code" placeholder="Coupon Code">
-          </div>
-          <div class="col-md-5">
-            <button class="btn btn-black" onclick="apply_coupone()">Apply Coupon</button>
-          </div>
-        </div>
+        
       </div>
       <div class="col-md-6 pl-5">
         <div class="row justify-content-end">
@@ -54,7 +43,11 @@
             
             <div class="row">
               <div class="col-md-12">
-                <button class="btn btn-warning btn-lg py-3 btn-block" onclick="window.location='checkout.php'">Proceed To Checkout</button>
+                <?php if(isset($_SESSION['user_loggedin']) && $_SESSION['user_loggedin']){ ?>
+									<button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.php'">Proceed To Checkout</button>
+ 								<?php }else{ ?>
+                  <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='login.php'">Proceed To Checkout</button>
+								<?php } ?>
               </div>
             </div>
           </div>
@@ -63,94 +56,8 @@
     </div>
   </div>
 </div><!-- Start Footer Section -->
-<!-- info section -->
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_contact">
-            <h4>
-              Contact
-            </h4>
-            <div class="box">
-              <div class="img-box">
-                <img src="images/telephone-symbol-button.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  +01 123567894
-                </h6>
-              </div>
-            </div>
-            <div class="box">
-              <div class="img-box">
-                <img src="images/email.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  ms@gmail
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_menu">
-            <h4>
-              Menu
-            </h4>
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.php"> About </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="medicine.php"> Medicine </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="buy.php"> Online Buy </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info_news">
-            <h4>
-              newsletter
-            </h4>
-            <form action="">
-              <input type="text" placeholder="Enter Your email">
-              <div class="d-flex justify-content-center justify-content-end mt-3">
-                <button>
-                  Subscribe
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<?php include('include/footer.php') ; ?>
 
-
-  <!-- end info section -->
-
-  <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2024 All Rights Reserved. Design by
-      <a href="index.php"> MS</a>
-    </p>
-  </section>
-  <!-- footer section -->
-  <!-- Footer -->
-            
-            <?php include('include/footer.php') ; ?>
-</body>
-
-</html>
 
 <script>
   let cart_data=<?= json_encode($_SESSION['cart']) ?>;

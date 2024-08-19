@@ -40,9 +40,8 @@
 </head>
   
 <body>
-  <div class="hero_area">
     <!-- header section strats -->
-    <header class="header_section">
+    <header class="header_section bg-info">
       <div class="container">
         <div class="top_contact-container">
           <div class="tel_container">
@@ -88,12 +87,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="medicine.php"> Medicine </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="buy.php"> Online Buy </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="news.php"> News </a>
-                </li>
+                
                 <li class="nav-item">
                   <a class="nav-link" href="contact.php">Contact us</a>
                 </li>
@@ -110,23 +104,17 @@
 
                 <li class="nav-item">
                   <div class="dropdown ">
-                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">User
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                     <?php if(isset($_SESSION['user_loggedin']) && $_SESSION['user_loggedin']){ ?>
-                    <span class="nav-link">
-                      <span style="color:white" class="first_name"><?= $_SESSION['user_data']->first_name ?></span>
-                      <img width="10%" class="w-px-40 h-auto rounded-circle" src="<?= $baseurl ?>admin/assets/customer_photos/">
-                      <!-- <span width="20%" class="w-px-40 h-auto rounded-circle"><?= $_SESSION['user_data']->photo ?></span> -->
-                      
-                    </span>
+                      <?= $_SESSION['user_data']->first_name ?>
+                      <img width="20%" class="w-px-40 h-auto rounded-circle" src="<?= $baseurl ?>images/user.png">
                   <?php } else { ?>
-            <!-- <span class="nav-link">
-                <img src="<?= $baseurl ?>admin/assets/customer_photos/" alt="Guest Photo">
-            </span> -->
+                    User
                   <?php } ?>
                   </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                           <?php if(isset($_SESSION['user_loggedin']) && $_SESSION['user_loggedin']){ ?>
-                              <li><a class="dropdown-item" href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a></li>
+                              <li><a class="dropdown-item" href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Order</a></li>
                               <li><a class="dropdown-item" href=""><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a></li>
                               <li><a class="dropdown-item" href="<?= $baseurl ?>logout.php"><span class="edu-icon edu-locked author-log-ic"></span>Logout</a></li>
                           <?php } else { ?>
@@ -172,16 +160,6 @@
 
           
           </ul>
-
-          
-              <!-- <div class="login_btn-contanier ml-0 ml-lg-5">
-                <a href="login.php">
-                  <img src="images/user.png" alt="">
-                  <span>
-                    Login
-                  </span>
-                </a>
-              </div> -->
             </div>
           </div>
 

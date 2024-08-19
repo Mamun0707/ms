@@ -234,7 +234,7 @@
 <?php 
     $invdata=array();
     $con['transaction_id']=$_GET['txnid'];
-    $result=$mysqli->common_select_single('sales','*',$con);
+    $result=$mysqli->common_select_single('orders','*',$con);
     if($result){
         if($result['data']){
             $invdata=$result['data'];
@@ -270,39 +270,37 @@
                                         <!-- logo ended --> 
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="invoice-id">
-                                        <div class="info">
-                                            <h1 class="inv-header-1">Invoice</h1>
-                                            <p class="mb-1">Invoice Number: <span>#<?= str_pad($invdata->id,7,"0",STR_PAD_LEFT) ?></span></p>
-                                            <p class="mb-0">Invoice Date: <span><?= date('d M Y',strtotime($invdata->created_at)) ?></span></p>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="invoice-top">
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                     <div class="invoice-number mb-30">
                                         <h4 class="inv-title-1">Invoice To</h4>
-                                        <h2 class="name"><?= $invdata->bill_first_name ?> <?= $invdata->bill_last_name ?></h2>
+                                        <b class="name"><?= $invdata->bill_first_name ?> <?= $invdata->bill_last_name ?></b><br/>
                                         <span>Phone: <?= $invdata->bill_phone ?></span><br/>
                                         <span>Email: <?= $invdata->bill_email ?></span><br/>
                                         <span>Address: <?= $invdata->bill_address ?>, <?= $invdata->bill_state ?>, <?= $invdata->bill_post ?></span>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                     <div class="invoice-number mb-30">
                                         <div class="invoice-number-inner">
                                             <h4 class="inv-title-1">Invoice From</h4>
-                                            <h2 class="name">MS</h2>
-                                            <p class="invo-addr-1">
+                                                <b class="name">MS</b><br/>
                                                 Medicine Shop BD  <br/>
                                                 msbd@gmail.com <br/>
                                                 Chittagong, Bangladesh <br/>
-                                            </p>
+                                        
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="invoice-number mb-30">
+                                        <h4 class="inv-title-1">Invoice</h4>
+                                        Invoice Number: <span>#<?= str_pad($invdata->id,7,"0",STR_PAD_LEFT) ?></span><br>
+                                            Invoice Date: <span><?= date('d M Y',strtotime($invdata->created_at)) ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -384,24 +382,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="invoice-contact clearfix">
-                            <div class="row g-0">
-                                <div class="col-sm-12">
-                                    <div class="contact-info clearfix">
-                                        <a href="tel:+55-4XX-634-7071" class="d-flex"><i class="fa fa-phone"></i> +00 123 647 840</a>
-                                        <a href="tel:info@themevessel.com" class="d-flex"><i class="fa fa-envelope"></i> info@msbd.com</a>
-                                        <a href="tel:info@themevessel.com" class="mr-0 d-flex d-none-580"><i class="fa-solid fa-location-dot"></i> Chittagong, Bangladesh</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="invoice-btn-section clearfix d-print-none">
                         <a href="javascript:window.print()" class="btn btn-lg btn-print">
                             <i class="fa fa-print"></i> Print Invoice
                         </a>
-                        <a id="invoice_download_btn" class="btn btn-lg btn-download btn-theme">
-                            <i class="fa fa-download"></i> Download Invoice
+                        <a href="<?= $baseurl ?>" class="btn btn-lg btn-download btn-theme">
+                            <i class="fa fa-home"></i> Home
                         </a>
                     </div>
                 </div>

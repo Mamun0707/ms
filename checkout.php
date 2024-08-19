@@ -1,33 +1,14 @@
 <?php include_once('include/header.php') ?>
 
-<!-- Start Hero Section -->
-<div class="hero">
-	<div class="container">
-		<div class="row justify-content-between">
-			<div class="col-lg-5">
-				<div class="intro-excerpt">
-					<h1 class="btn btn-success btn-lg py-3 btn-block">Checkout</h1>
-				</div>
-			</div>
-			<div class="col-lg-7">
-				
-			</div>
-		</div>
-	</div>
-</div>
-<!-- End Hero Section -->
 
-<div class="untree_co-section">
+
+<?php if(isset($_SESSION['user_loggedin']) && $_SESSION['user_loggedin']){ ?>
+
+<div class="untree_co-section" style="margin-top:25px">
 	<div class="container">
 		<?php if(isset($_SESSION['cart'])){ ?>
 		<form action="sslcmz.php" method="post">
-			<div class="row mb-5">
-				<div class="col-md-12">
-				<div class="border p-4 rounded" role="alert ">
-					Returning customer? <a class="btn btn-info" href="login.php"> Click here</a> to login
-				</div>
-				</div>
-			</div>
+			<input value="<?= $_SESSION['user_data']->id ?>" type="text" name="customer_id">
 			<div class="row">
 				<div class="col-md-6 mb-5 mb-md-0">
 					<h2 class="h3 mb-3 text-black">Billing Details</h2>
@@ -50,6 +31,7 @@
 							<div class="col-md-6">
 								<label for="bill_first_name" class="text-black">First Name <span class="text-danger">*</span></label>
 								<input value="<?= $_SESSION['user_data']->first_name ?>" required="" type="text" class="form-control" id="bill_first_name" name="bill_first_name">
+								
 							</div>
 							<div class="col-md-6">
 								<label for="bill_last_name" class="text-black">Last Name <span class="text-danger">*</span></label>
@@ -227,6 +209,8 @@
 		<!-- </form> -->
 	</div>
 </div>
-
+<?php }else{ ?>
+	<h1>You have to login first</h1>
+<?php } ?>
 <!-- Start Footer Section -->
 <?php include_once('include/footer.php')?>

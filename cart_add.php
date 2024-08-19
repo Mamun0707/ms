@@ -33,23 +33,3 @@
     $_SESSION['cart']['total_qty']=$total_qty;
   }
 ?>
-
-<!-- array[
-  cart=>[
-        item=>[
-            2=>[
-              brand_name=>Exiam
-              ]
-            ],
-            3=>[
-              brand_name=>jkhj
-              ]
-            ]
-          
-        total=>50,
-        discount=>0,
-        cupon=>"",
-        total_qty=>5
-      ],
-
-  ] -->

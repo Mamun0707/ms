@@ -57,12 +57,12 @@ $_POST['coupon_code']=$_SESSION['cart']['cupon'];
 $_POST['transaction_id']=$post_data['tran_id'];
 $_POST['created_at']=date('Y-m-d H:i:s');
 $_POST['created_by']=1;
-$rs=$mysqli->common_create('sales',$_POST);
+$rs=$mysqli->common_create('orders',$_POST);
 if($rs){
     if($rs['data']){
         if($_SESSION['cart']['item']){
             foreach($_SESSION['cart']['item'] as $k => $v){
-                $purs['sales_id']=$rs['data'];
+                $purs['orders_id']=$rs['data'];
                 $purs['medicine_id']=$k;
                 $purs['qty']="-".$v['qty'];
                 $purs['price']=$v['price'];

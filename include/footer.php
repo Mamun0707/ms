@@ -1,5 +1,5 @@
 <!-- info section -->
-  <section class="info_section layout_padding2">
+  <section class="info_section layout_padding2" style="margin-top:25px;">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -125,6 +125,7 @@
 				$.get('cart_add.php',
 					{ id : id},
 					function(data){
+            console.log(data)
 						if(data){
 							data=JSON.parse(data);
 							$('.cart_total').html(data.total_qty)
