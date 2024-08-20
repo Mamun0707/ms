@@ -54,12 +54,11 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="<?= $baseurl ?>invoice.php?id=<?= $data->id ?>"
-                                        ><i class="bx bx-trash me-2"></i> Invoice</a
-                                        >
-                                        <a class="dropdown-item" href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>"
-                                        ><i class="bx bx-trash me-2"></i> Delete</a
-                                        >
+                                        <a href="invoice.php?txnid=<?= $data->transaction_id ?? "" ?>" class="btn btn-success">Invoice</a>
+                                        <a href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>" class="btn btn-danger">Delete</a>
+                                        <!-- <a class="dropdown-item " href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>"
+                                        ><i class="btn btn-success bx bx-trash me-2"></i> Delete</a
+                                        > -->
                                     </div>
                                 </div>
                             </td>

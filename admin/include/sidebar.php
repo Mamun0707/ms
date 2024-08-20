@@ -217,7 +217,7 @@
 
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon bi bi-cart3"></i>
+        <i class="menu-icon bi bi-bag-heart"></i>
         <div data-i18n="Dashboards">Orders</div>
       </a>
       <ul class="menu-sub">
