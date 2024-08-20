@@ -16,7 +16,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="img-box">
-                    <img src="images/medicine.png" alt="">
+                    <img src="images/med2.png" alt="">
                   </div>
                 </div>
                 <div class="col-md-8">
@@ -24,7 +24,7 @@
                     <h1>
                       Welcome To Our <br>
                       <span>
-                        Online Medicine
+                        Medicine Shop
                       </span>
 
                     </h1>
@@ -56,7 +56,7 @@
                     <h1>
                       Welcome To Our <br>
                       <span>
-                        Online Medicine
+                        Medicine Shop
                       </span>
 
                     </h1>
@@ -80,7 +80,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="img-box">
-                    <img src="images/medicine.png" alt="">
+                    <img src="images/drug.png" alt="" width=100%>
                   </div>
                 </div>
                 <div class="col-md-8">
@@ -88,7 +88,7 @@
                     <h1>
                       Welcome To Our <br>
                       <span>
-                        Online Medicine
+                        Medicine Shop
                       </span>
 
                     </h1>
