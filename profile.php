@@ -1,5 +1,5 @@
 <?php include('include/header.php') ; ?>
-<?php include_once('include/auth_check.php') ?>
+
 <!-- Content -->
 
 <div class="container-xxl flex-grow-1 container-p-y">
