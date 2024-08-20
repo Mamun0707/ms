@@ -28,7 +28,7 @@
               <span>BDT</span> <?= $data->price ?>
             </div>
             <a onclick="addToCart(<?= $data->id ?>)" href="javascript:void(0)">
-              Buy Now
+              Add To Cart
             </a>
           </div>
         </div>
