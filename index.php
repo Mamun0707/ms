@@ -146,7 +146,7 @@
             <div class="box w-100">
               <div class="btn_container">
                 <a onclick="addToCart(<?= $data->id ?>)" href="javascript:void(0)">
-                  Buy Now
+                 Add To Cart
                 </a>
               </div>
               <a href="<?= $baseurl ?>product.php?id=<?= $data->id ?>">

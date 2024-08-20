@@ -52,7 +52,7 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="invoice.php?txnid=<?= $data->transaction_id ?? "" ?>"><i class="bx bx-edit-alt me-2"></i> Invoice</a>
+                                        <a class="dropdown-item " href="invoice.php?txnid=<?= $data->transaction_id ?? "" ?>"><i class="bx bx-edit-alt me-2 "></i> Invoice</a>
                                         <?php if($data->cancel_request==0){ ?>
                                         <a class="dropdown-item" href="<?= $baseurl ?>cencel_request.php?id=<?= $data->id ?>"><i class="bx bx-trash me-2"></i> Cancel</a>
                                         <?php }else if($data->status==0){ ?>
