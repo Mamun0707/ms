@@ -12,7 +12,7 @@
 									<label for="ship_country" class="text-black">Country <span class="text-danger">*</span></label>
 									<select id="ship_country" name="country" class="form-control">
 										<option value="0">Select a country</option>    
-										<option value="2">bangladesh</option>    
+										<option value="2">Bangladesh</option>    
 										<option value="3">Algeria</option>    
 										<option value="4">Afghanistan</option>    
 										<option value="5">Ghana</option>    
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <label for="company_name">Company Name</label>
-                    <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Company Name" />
+                    <input type="text" name="Company Name" class="form-control" id="company_name" placeholder="Company Name" />
                 </div>
                 <div class="form-group">
                     <label for="address" >Address<span class="text-danger">*</span></label>

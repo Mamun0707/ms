@@ -1,73 +1,86 @@
-<?php include('include/header.php') ?>
+<?php include('include/header.php') ; ?>
 <?php include_once('include/auth_check.php') ?>
-<?php 
-    $olddata=array();
-    $con['id']=$_SESSION['customer_id'];
-    $result=$mysqli->common_select_single('customer','*',$con);
-    if($result){
-        if($result['data']){
-            $olddata=$result['data'];
+<!-- Content -->
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <!-- <h4 class="py-3 mb-4"><span class="text-muted fw-light">My Profile</h4> -->
+    <?php 
+        $olddata=array();
+       
+        $result=$mysqli->common_select_single('customer');
+        if($result){
+            if($result['data']){
+                $olddata=$result['data'];
+            }
         }
-    }
-?>
-<section class="section">
-    <!-- page content -->
-    <div class="right_col" role="main">
-        <div class="">
-            <div class="clearfix"></div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="x_panel">
-                        <div class="x_content">
-                            <form class="" action="" method="post" novalidate>
-                                <div class="field item form-group">
-                                    <label class="col-form-label col-md-3 col-sm-3  label-align">First Name<span class="required">*</span></label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input class="form-control" class='optional' name="first_name" value="<?= $olddata->first_name ?>" data-validate-length-range="5,15" type="text"/></div>
-                                </div>
-                                <div class="field item form-group">
-                                    <label class="col-form-label col-md-3 col-sm-3  label-align">Contact No<span class="required">*</span></label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="<?= $olddata->contact_no ?>" name="contact_no" required="required" />
-                                    </div>
-                                </div>
-                                <div class="field item form-group">
-                                    <label class="col-form-label col-md-3 col-sm-3  label-align">Email<span class="required">*</span></label>
-                                    <div class="col-md-6 col-sm-6">
-                                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" value="<?= $olddata->email ?>" name="email" required="required" />
-                                    </div>
-                                </div>
-                                
-                                <div class="ln_solid">
-                                    <div class="form-group">
-                                        <div class="col-md-6 offset-md-3">
-                                            <button type='submit' class="btn btn-primary">Submit</button>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <?php 
-                                if($_POST){
-                                    $_POST['updated_at']=date('Y-m-d H:i:s');
-                                    $_POST['updated_by']=1;
-                                    $rs=$mysqli->common_create('customer',$_POST);
-                                    if($rs){
-                                        if($rs['data']){
-                                            echo "<script>window.location='{$baseurl}customer_details.php'</script>";
-                                        }else{
-                                            echo $rs['error'];
-                                        }
-                                    }
-                                }
-                            ?>
-                                
-                        </div>
-                    </div>
+    ?>
+    <!-- Basic Layout -->
+    <div class="row">
+    <div class="col-xl">
+        <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">My Profile</h5>
+        </div>
+        <div class="card-body">
+            <form method="post" action="" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="fullname">First Name</label>
+                    <input type="text" name="first_name" class="form-control" id="first_name" placeholder="John Doe" value="<?= $olddata->first_name ?>" required />
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label" for="fullname">Last Name</label>
+                    <input type="text" name="last_name" class="form-control" id="last_name" placeholder="John Doe" value="<?= $olddata->last_name ?>" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="fullname">Company Name</label>
+                    <input type="text" name="company_name" class="form-control" id="company_name" placeholder="John Doe" value="<?= $olddata->company_name ?>" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="fullname">Address</label>
+                    <input type="text" name="address" class="form-control" id="address" placeholder="John Doe" value="<?= $olddata->address ?>" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="fullname">State</label>
+                    <input type="text" name="state" class="form-control" id="state" placeholder="John Doe" value="<?= $olddata->state ?>" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">E-mail</label>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="abc@email.com" value="<?= $olddata->email ?>" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Phone</label>
+                    <input type="text" name="phone" id="phone" class="form-control" placeholder="abc@email.com" value="<?= $olddata->phone ?>" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="contact ">Contact</label>
+                    <input type="text" name="contact" id="contact" class="form-control" placeholder="Enter Your Contact Number" value="<?= $olddata->contact ?>" />
+                </div>
+                <!-- <div class="mb-3">
+                    <label class="form-label" for="photo">Photo</label>
+                    <input type="file" name="photo" id="photo" class="form-control" required value="<?= $olddata->photo ?>" />
+                </div> -->
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+            <?php 
+                if($_POST){
+                    $_POST['updated_at']=date('Y-m-d H:i:s');
+                    $_POST['updated_by']=1;
+                    $rs=$mysqli->common_create('customer',$_POST);
+                    if($rs){
+                        if($rs['data']){
+                            echo "<script>window.location='{$baseurl}index.php'</script>";
+                        }else{
+                            echo $rs['error'];
+                        }
+                    }
+                }
+            ?>
+        </div>
         </div>
     </div>
-    <!-- /page content -->
-</section>
- <?php include('include/footer.php') ?>
+    
+    </div>
+</div>
+<!-- / Content -->
+
+<?php include('include/footer.php') ; ?>
