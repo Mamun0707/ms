@@ -149,19 +149,21 @@
                   Buy Now
                 </a>
               </div>
-              <div class="img-box w-100">
-                <img src="<?= $baseurl ?>assets/img/medicine/<?= $data->photo ?>" alt="" class="w-100">
-              </div>
-              <div class="detail-box">
-                
-                <div class="text">
-                  <h6><?= $data->brand_name ?></h6>
-                  <h6 class="price">
-                    <span>BDT</span>
-                    <?= $data->price ?>
-                  </h6>
+              <a href="<?= $baseurl ?>product.php?id=<?= $data->id ?>">
+                <div class="img-box w-100">
+                  <img src="<?= $baseurl ?>assets/img/medicine/<?= $data->photo ?>" alt="" class="w-100">
                 </div>
-              </div>
+                <div class="detail-box">
+                  
+                  <div class="text">
+                    <h6><?= $data->brand_name ?></h6>
+                    <h6 class="price">
+                      <span>BDT</span>
+                      <?= $data->price ?>
+                    </h6>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
           <?php } } } ?>

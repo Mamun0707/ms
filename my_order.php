@@ -21,19 +21,19 @@
                     <thead>
                         <tr>
                             <th>#SL</th>
-                            <th>Bill First Name</th>
-                            <th>Bill Last Name</th>
-                            <th>Bill Phone</th>
                             <th>Total Amount</th>
                             <th>Discount</th>
                             <th>Total Qty</th>
                             <th>Transaction ID</th>
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php 
-                            $result=$mysqli->common_select('orders');
+                            $status=array("Pending","Processing","Delivered","Canceled");
+                            $con['customer_id']=$_SESSION['user_data']->id;
+                            $result=$mysqli->common_select('orders','*',$con);
                             if($result){
                                 if($result['data']){
                                     $i=1;
@@ -41,13 +41,11 @@
                         ?>
                         <tr>
                             <td><?= $i++ ?></td>
-                            <td><?= $data->bill_first_name ?></td>
-                            <td><?= $data->bill_last_name ?></td>
-                            <td><?= $data->bill_phone ?></td>
                             <td><?= $data->total_amount ?></td>
                             <td><?= $data->discount ?></td>
                             <td><?= $data->total_qty ?></td>
                             <td><?= $data->transaction_id ?></td>
+                            <td><?= $status[$data->status] ?></td>
                             <td>
                                 <div class="dropdown">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -55,14 +53,11 @@
                                         </button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="invoice.php?txnid=<?= $data->transaction_id ?? "" ?>"><i class="bx bx-edit-alt me-2"></i> Invoice</a>
-                                        <a class="dropdown-item" href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>"><i class="bx bx-trash me-2"></i> Delete</a>
-                                        
-                                    
-                                        <!-- <a href="invoice.php?txnid=<?= $data->transaction_id ?? "" ?>" class="btn btn-success">Invoice</a>
-                                        <a href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>" class="btn btn-danger">Delete</a> -->
-                                        <!-- <a class="dropdown-item " href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>"
-                                        ><i class="btn btn-success bx bx-trash me-2"></i> Delete</a
-                                        > -->
+                                        <?php if($data->cancel_request==0){ ?>
+                                        <a class="dropdown-item" href="<?= $baseurl ?>cencel_request.php?id=<?= $data->id ?>"><i class="bx bx-trash me-2"></i> Cancel</a>
+                                        <?php }else if($data->status==0){ ?>
+                                            <a class="dropdown-item" href="#"><i class="bx bx-trash me-2"></i> waiting for admin approval</a>
+                                       <?php  } ?>
                                     </div>
                                 </div>
                             </td>

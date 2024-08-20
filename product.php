@@ -3,25 +3,37 @@
   <!-- about section -->
   <section class="about_section layout_padding">
     <div class="container">
-      <div class="custom_heading-container ">
-        <h2>
-          NAPA EXTEND
-        </h2>
-      </div>
-
-      <div class="img-box">
-        <img src="images/napa-extend.png" alt="" height="500">
-      </div>
-      <div class="detail-box">
-        <p>
-         Napa Extend Tablet contains Paracetamol, which is classified as an Analgesic and Antipyretic medication. It is commonly used to relieve mild to moderate pain, such as headaches, backaches, toothaches, severe nerve pain, sore throat, period pain, low back and leg pain, muscle, connective tissue, and joint pain. It can also help reduce fever and alleviate symptoms associated with cold or flu.
-        </p>
-        <div class="d-flex justify-content-center">
-          <a href="">
-            Price : $2 
-          </a>
+    <?php 
+      $id=$_GET['id'];
+      $result=$mysqli->common_select_query("select medicine.id,medicine.brand_name, medicine.generic_name,medicine.price, medicine.photo, medicine.dose,  medicine.status, type.type from medicine join type on type.id=medicine.type_id where medicine.deleted_at is null and medicine.id=$id");
+      if($result){
+        if($result['data']){
+          foreach($result['data'] as $data){
+    ?>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="img-box">
+            <img src="<?= $baseurl ?>assets/img/medicine/<?= $data->photo ?>" alt="" height="500">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h4 class="text-left"> <?= $data->brand_name ?> </h4>
+          <div class="detail-box">
+            <p class="text-left">
+              <?= $data->generic_name ?> <br>
+              <?= $data->dose ?> <br>
+              <?= $data->type ?>
+            </p>
+            <div class="text-left">
+              <span>BDT</span> <?= $data->price ?>
+            </div>
+            <a onclick="addToCart(<?= $data->id ?>)" href="javascript:void(0)">
+              Buy Now
+            </a>
+          </div>
         </div>
       </div>
+      <?php } } } ?>
     </div>
   </section>
 

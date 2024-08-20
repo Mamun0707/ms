@@ -28,11 +28,13 @@
                             <th>Discount</th>
                             <th>Total Qty</th>
                             <th>Transaction ID</th>
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php 
+                            $status=array("Pending","Processing","Delivered","Canceled");
                             $result=$mysqli->common_select('orders');
                             if($result){
                                 if($result['data']){
@@ -48,6 +50,7 @@
                             <td><?= $data->discount ?></td>
                             <td><?= $data->total_qty ?></td>
                             <td><?= $data->transaction_id ?></td>
+                            <td><?= $status[$data->status] ?></td>
                             <td>
                                 <div class="dropdown">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -56,8 +59,8 @@
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="invoice.php?txnid=<?= $data->transaction_id ?? "" ?>"
                                         ><i class="bx bx-receipt me-2"></i> Invoice</a>
-                                        <a class="dropdown-item" href="<?= $baseurl ?>orders_delete.php?id=<?= $data->id ?>"
-                                        ><i class="bx bx-trash me-2"></i> Delete</a>
+                                        <a class="dropdown-item" href="<?= $baseurl ?>order_edit.php?id=<?= $data->id ?>"
+                                        ><i class="bx bx-trash me-2"></i> Edit</a>
                                     </div>
                                 </div>
                             </td>

@@ -8,7 +8,7 @@
 	<div class="container">
 		<?php if(isset($_SESSION['cart'])){ ?>
 		<form action="sslcmz.php" method="post">
-			<input value="<?= $_SESSION['user_data']->id ?>" type="text" name="customer_id">
+			<input value="<?= $_SESSION['user_data']->id ?>" type="hidden" name="customer_id">
 			<div class="row">
 				<div class="col-md-6 mb-5 mb-md-0">
 					<h2 class="h3 mb-3 text-black">Billing Details</h2>
