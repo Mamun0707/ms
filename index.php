@@ -34,7 +34,7 @@
                       believable.
                     </p>
                     <div>
-                      <a href="">
+                      <a href="medicine.php">
                         Buy Now
                       </a>
                     </div>
