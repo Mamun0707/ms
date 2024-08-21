@@ -233,6 +233,26 @@
 
     <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon bi-tags-fill"></i>
+        <div data-i18n="Dashboards">Coupon</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item">
+          <a href="<?= $baseurl ?>coupon_add.php" class="menu-link">
+            <div data-i18n="CRM">Add New</div>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="<?= $baseurl ?>coupon_list.php" class="menu-link">
+            <div data-i18n="CRM">Coupon List</div>
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon bi bi-journal-medical"></i>
         <div data-i18n="Dashboards">Report</div>
       </a>
