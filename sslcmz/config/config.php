@@ -1,7 +1,7 @@
 <?php
-
+require(__DIR__ . '/../../include/connection.php');
 if (!defined('PROJECT_PATH')) {
-    define('PROJECT_PATH', 'http://localhost/ms'); // replace this value with your project path
+    define('PROJECT_PATH', $baseurl); // replace this value with your project path
 }
 
 if (!defined('IS_SANDBOX')) {
