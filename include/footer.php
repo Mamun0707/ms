@@ -13,7 +13,7 @@
               </div>
               <div class="detail-box">
                 <h6>
-                  +01 123567894
+                  +999
                 </h6>
               </div>
             </div>
@@ -23,7 +23,7 @@
               </div>
               <div class="detail-box">
                 <h6>
-                  demo@gmail
+                  pharmacy@weeblecode.com
                 </h6>
               </div>
             </div>
@@ -36,16 +36,16 @@
             </h4>
             <ul class="navbar-nav  ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About </a>
+                <a class="nav-link" href="about.php"> About </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="medicine.html"> Medicine </a>
+                <a class="nav-link" href="medicine.php"> Medicine </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="buy.html"> Online Buy </a>
+                <a class="nav-link" href="contact.php"> Contact Us </a>
               </li>
             </ul>
           </div>

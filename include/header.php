@@ -16,6 +16,9 @@
 
   <title>MS</title>
 
+  <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?=$baseurl ?>/assets/img/favicon/icons8-medicine-48.png" />
+
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -41,7 +44,7 @@
   
 <body>
     <!-- header section strats -->
-    <header class="header_section bg-info">
+    <header style="background:green" class="header_section bg-info">
       <div class="container">
         <div class="top_contact-container">
           <div class="tel_container">
@@ -76,7 +79,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex  flex-column flex-lg-row align-items-center w-100 justify-content-between">
+            <div class="d-flex  flex-column flex-lg-row align-items-center w-100 justify-content-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
