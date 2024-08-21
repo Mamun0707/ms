@@ -66,7 +66,7 @@
                       believable.
                     </p>
                     <div>
-                      <a href="">
+                      <a href="medicine.php">
                         Buy Now
                       </a>
                     </div>
@@ -98,7 +98,7 @@
                       believable.
                     </p>
                     <div>
-                      <a href="">
+                      <a href="medicine.php">
                         Buy Now
                       </a>
                     </div>
@@ -131,7 +131,7 @@
 
   <section class="health_section layout_padding">
     <div class="health_carousel-container">
-      <h2 class="text-uppercase">
+      <h2 class="text-uppercase text-center">
         Medicine & Health
       </h2>
       <div class="carousel-wrap layout_padding2">
@@ -171,7 +171,7 @@
       </div>
     </div>
     <div class="d-flex justify-content-center">
-      <a href="">
+      <a class="btn btn-primary" href="medicine.php">
         See more
       </a>
     </div>
@@ -206,7 +206,7 @@
         </div>
         <div class="col-lg-7 col-md-5">
           <div class="img-box">
-            <img src="images/medicines.jpg" alt="">
+            <img src="images/vrachi-v-maskakh.png" alt="">
           </div>
         </div>
       </div>
@@ -395,10 +395,10 @@
         </div>
         <div class="col-md-7">
           <div class="detail-box">
-            <h3>
+            <h3 class="text-dark">
               Get Now Medicines
             </h3>
-            <p>
+            <p class="text-dark">
               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
               in some form, by injected humour, or randomised words which don't look even slightly believable.
             </p>

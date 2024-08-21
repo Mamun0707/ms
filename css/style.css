@@ -57,7 +57,8 @@ body {
 /*header section*/
 .hero_area {
   height: 100vh;
-  background-image: url(../images/hero-bg.jpg);
+  background-color: #E3A476;
+  /* background-image: url(../images/hero-bg.jpg); */
 }
 
 .sub_page .hero_area {
@@ -279,7 +280,7 @@ a:focus {
   display: inline-block;
   padding: 10px 45px;
   background-color: #2c2c2c;
-  border: 1px solid #2c2c2c;
+  border: 1px solid #10e7f4;
   color: #ffffff;
   margin-top: 35px;
   margin-bottom: 45px;
@@ -413,7 +414,7 @@ a:focus {
 }
 
 .discount_section {
-  background-color: #1e1d1d;
+  background-color: #9e6442;
   color: #ffffff;
 }
 
@@ -438,7 +439,7 @@ a:focus {
 }
 
 .discount_section .detail-box h2 span {
-  color: #10e7f4;
+  color: #f48610;
 }
 
 .discount_section .detail-box p {
@@ -448,7 +449,7 @@ a:focus {
 .discount_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #10e7f4;
+  background-color: #000000;
   border: 1px solid #10e7f4;
   color: #ffffff;
   margin-top: 35px;
@@ -464,21 +465,22 @@ a:focus {
 }
 
 .health_section .health_carousel-container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  /* background-color: #f45410; */
 }
 
 .health_section a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #2c2c2c;
-  border: 1px solid #2c2c2c;
-  color: #ffffff;
+  background-color:transparent;
+  /* border: 1px solid #2c2c2c; */
+  color: #d00f0f;
   margin-top: 30px;
 }
 
 .health_section a:hover {
-  background-color: transparent;
+  /* background-color: #60493f; */
   color: #2c2c2c;
 }
 
@@ -493,7 +495,7 @@ a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 300px;
+  width: 00px;
   height: 360px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -828,7 +830,7 @@ a:focus {
 
 /* footer section*/
 .footer_section {
-  background-color: #121111;
+  background: green;
   font-weight: 500;
 }
 
