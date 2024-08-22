@@ -57,8 +57,9 @@ body {
 /*header section*/
 .hero_area {
   height: 100vh;
-  background-color: #E3A476;
-  /* background-image: url(../images/hero-bg.jpg); */
+  background-color: #76cae3;
+  background-image: url(../images/pharma-physician-479304376.jpg);
+  
 }
 
 .sub_page .hero_area {
@@ -113,7 +114,7 @@ body {
 }
 
 .header_section .container-fluid {
-  background-color: #2c2c2c;
+  background-color: #1c96af;
 }
 
 .header_section .container-fluid {
@@ -263,17 +264,18 @@ a:focus {
 }
 
 .slider_section .detail-box h1 {
-  color: #2c2c2c;
+  color: #fbfbfb;
 }
 
 .slider_section .detail-box h1 span {
   font-size: 4rem;
-  color: #ffffff;
+  color: #bbe612;
   font-weight: bold;
 }
 
 .slider_section .detail-box p {
   color: #ffffff;
+  font-weight: bold;
 }
 
 .slider_section .detail-box a {
@@ -281,14 +283,14 @@ a:focus {
   padding: 10px 45px;
   background-color: #2c2c2c;
   border: 1px solid #10e7f4;
-  color: #ffffff;
+  color: #2dea18;
   margin-top: 35px;
   margin-bottom: 45px;
 }
 
 .slider_section .detail-box a:hover {
   background-color: transparent;
-  color: #2c2c2c;
+  color: #2dea18;
 }
 
 .slider_section #carouselExampleIndicators {
@@ -414,7 +416,7 @@ a:focus {
 }
 
 .discount_section {
-  background-color: #9e6442;
+  background-color: #429e58;
   color: #ffffff;
 }
 

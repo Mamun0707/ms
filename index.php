@@ -16,7 +16,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="img-box">
-                    <img src="images/med2.png" alt="">
+                    <img src="images/med.png" alt="">
                   </div>
                 </div>
                 <div class="col-md-8">
@@ -29,9 +29,7 @@
 
                     </h1>
                     <p>
-                      There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                      alteration in some form, by injected humour, or randomised words which don't look even slightly
-                      believable.
+                      Your go-to online pharmacy for quick and easy medicine.
                     </p>
                     <div>
                       <a href="medicine.php">
@@ -48,22 +46,20 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="img-box">
-                    <img src="images/medicine.png" alt="">
+                    <img src="images/30_-removebg-preview.png" alt="" width=100%>
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="detail-box">
                     <h1>
-                      Welcome To Our <br>
+                      To Get Discount Use <br>
                       <span>
-                        Medicine Shop
+                            MS2024
                       </span>
 
                     </h1>
                     <p>
-                      There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                      alteration in some form, by injected humour, or randomised words which don't look even slightly
-                      believable.
+                      You get any medicine on 30% discount
                     </p>
                     <div>
                       <a href="medicine.php">
@@ -93,9 +89,7 @@
 
                     </h1>
                     <p>
-                      There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                      alteration in some form, by injected humour, or randomised words which don't look even slightly
-                      believable.
+                      Your go-to online pharmacy for quick and easy medicine.
                     </p>
                     <div>
                       <a href="medicine.php">
@@ -131,7 +125,7 @@
 
   <section class="health_section layout_padding">
     <div class="health_carousel-container">
-      <h2 class="text-uppercase text-center">
+      <h2 class="text-uppercase center">
         Medicine & Health
       </h2>
       <div class="carousel-wrap layout_padding2">
@@ -151,7 +145,7 @@
               </div>
               <a href="<?= $baseurl ?>product.php?id=<?= $data->id ?>">
                 <div class="img-box w-100">
-                  <img src="<?= $baseurl ?>assets/img/medicine/<?= $data->photo ?>" alt="" class="w-100">
+                  <img src="<?= $baseurl ?>assets/img/medicine/<?= $data->photo ?>" alt="" class="img-fluid product-thumbnail">
                 </div>
                 <div class="detail-box">
                   
@@ -190,7 +184,7 @@
               any medicine <br>
               on
               <span>
-                10% discount
+                30% discount
               </span>
 
             </h2>
@@ -198,7 +192,7 @@
               It is a long established fact that a reader will be distracted by
             </p>
             <div>
-              <a href="">
+              <a href="medicine.php">
                 Buy Now
               </a>
             </div>
